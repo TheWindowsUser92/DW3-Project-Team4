@@ -1,0 +1,1 @@
+location: game.php
