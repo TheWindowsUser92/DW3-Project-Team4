@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Changed background color to light blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ers {
+    background-color: #ffeaea;
+    color: red;
+    border: 1px solid red;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+div[id$="Message"] {
+    min-height: 20px;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Adjusted width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ff5733; /* Changed button background color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: calc(100% - 20px); /* Adjusted width */
+    margin: 20px auto 10px; /* Adjusted margins */
+}
+
+button:hover {
+    background-color: #ff6f47; /* Changed hover background color */
+}
+
+a {
+    color: #005AEE;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
