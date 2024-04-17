@@ -18,7 +18,7 @@
                 shuffle($letters);
                 $randomLetters = array_slice($letters, 0, 6);
                 $sortedLetters = selectMinimum($randomLetters); // Sort the random letters array
-                echo implode('  ', $sortedLetters); // Display sorted letters to the user
+                echo implode('  ', $randomLetters); // Display sorted letters to the user
             ?>
             <br><br>
             <?php
