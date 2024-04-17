@@ -60,11 +60,11 @@
             ?>
             <br><br>
             <label for="smallest">Smallest Letter:</label>
-            <input type="text" id="smallest" name="smallest" value="<?php echo $smallest?>">
+            <input type="text" id="smallest" name="smallest">
             <input type="hidden" id="smallAns" name="smallAns" value="<?php echo $smallest?>">
             <br><br>
             <label for="largest">Largest Letter:</label>
-            <input type="text" id="largest" name="largest" value="<?php echo $largest?>">
+            <input type="text" id="largest" name="largest">
             <input type="hidden" id="largeAns" name="largeAns" value="<?php echo $largest?>">
             <br><br>
             <button type="submit" name="submit">Submit</button>

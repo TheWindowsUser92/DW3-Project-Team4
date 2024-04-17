@@ -65,7 +65,7 @@ class Database {
 
     if (mysqli_num_rows($result) == 0) {
         // Database doesn't exist, create it using the SQL file
-        $createDBSQL = file_get_contents('.\database-entity.sql');
+        $createDBSQL = file_get_contents('database-entity.sql');
         if ($this->executeMultiQuery($createDBSQL)) {
             return TRUE; // Database created successfully
         } else {

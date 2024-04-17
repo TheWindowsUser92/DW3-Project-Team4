@@ -19,7 +19,7 @@
                     $numbers[] = rand(0, 100);
                 }
                 $sortedNumbers = selectMaximum($numbers);
-                echo implode('  ', $sortedNumbers);
+                echo implode('  ', $numbers);
             ?>
                 <br><br>
                 <?php

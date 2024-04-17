@@ -60,7 +60,7 @@
 
 <script>
     function startGame() {
-        window.location.href = 'Level6.php';
+        window.location.href = 'Level1.php';
     }
 </script>
 

@@ -18,7 +18,7 @@
                 shuffle($letters);
                 $randomLetters = array_slice($letters, 0, 6);
                 $sortedLetters = selectMaximum($randomLetters); // Sort the random letters array
-                echo implode('  ', $sortedLetters);
+                echo implode('  ', $randomLetters);
             ?>
                 <br><br>
                 <?php
