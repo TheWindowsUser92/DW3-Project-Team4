@@ -4,7 +4,7 @@ Welcome to our Kids Web Game project! This web application is designed to provid
 
 ## Project Overview
 
-The Kids Web Game project is developed using HTML, CSS, JavaScript, PHP, and MySQL. It offers a collection of fun games tailored for kids, accompanied by features such as user authentication (sign in and sign up) and game state tracking. The project aims to provide a safe and entertaining online environment for children to explore and enjoy.
+The Kids Web Game project is developed using HTML, CSS, JavaScript, PHP, and MySQL. It offers 6 levels of fun games tailored for kids, accompanied by features such as user authentication (sign in and sign up) and game state tracking. The project aims to provide a safe and entertaining online environment for children to explore and enjoy.
 
 ## Developers
 
@@ -29,7 +29,7 @@ To get started with the Kids Web Game project, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Set up a local development environment with PHP and MySQL.
-3. Import the provided SQL database to set up the necessary tables.
+3. Set up the necessary settings in config.php inside of root directory for the database.
 4. Start the PHP server and navigate to the project directory in your web browser.
 5. Explore the games and enjoy the experience!
 
