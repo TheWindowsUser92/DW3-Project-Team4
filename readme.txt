@@ -10,19 +10,12 @@ The Kids Web Game project is developed using HTML, CSS, JavaScript, PHP, and MyS
 
 This project was developed by the following team members:
 
-1. Ali Bahiraei
-2. Dornaz Namazi
-3. Arshath Wuvais
-4. Junyi Shen
-5. Kooshal Aman Foolmaun
-
-## Developer Contributions
-
-- Ali Bahiraei: [Brief description of contributions]
-- Dornaz Namazi: [Brief description of contributions]
-- Arshath Wuvais: [Brief description of contributions]
-- Junyi Shen: [Brief description of contributions]
-- Kooshal Aman Foolmaun: [Brief description of contributions]
+Developper 1 : Ali Bahiraei
+Developper 2: Dornaz Namazi
+Developper 3: Arshath Wuvais
+Developper 4: Junyi Shen
+Developper 5: Kooshal Aman Foolmaun
+Developper 6: Mainly Kooshal Aman Foolmaun with help of all members
 
 ## Features
 
