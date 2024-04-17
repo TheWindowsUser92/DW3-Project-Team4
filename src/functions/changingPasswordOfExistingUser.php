@@ -17,6 +17,11 @@ public function changePassword($username, $newPassword, $confirmPassword) {
         return "<br>Please fill in all fields!";
     }
 
+    if (strlen($newPassword) < 8)
+    {
+        return "<br>Password must be more than 8 characters long!";
+    }
+
     // Check if new password matches the confirm password
     if ($newPassword !== $confirmPassword) {
         return "<br>Passwords do not match!";
@@ -96,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <span id="result" style="color:grey;"></span>
         <button type="submit" name="changePassword">Change Password</button>
         <button type="submit" name="login">Login</button>
+        <a href="../../index.php">Go Home</a>
     </form>
     <!-- JavaScript to update the result span -->
     <script>

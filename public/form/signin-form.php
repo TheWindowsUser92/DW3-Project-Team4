@@ -41,7 +41,7 @@ session_start()
 
 		<p>Forgot your password? <a href="../../src/functions/changingPasswordOfExistingUser.php">Change it</a></p>
 
-
+		<a href="../../index.php">Go Home</a>
 		
 	</form>
 

@@ -55,7 +55,7 @@
 
         <button type="submit" name="action" value="register">Register</button>
         <button type="button" onclick="location.href='signin-form.php';">Login</button>
-
+        <a href="../../index.php">Go Home</a>
     </form>
 </body>
 </html>
