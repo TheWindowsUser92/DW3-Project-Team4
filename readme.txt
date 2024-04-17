@@ -35,7 +35,7 @@ To get started with the Kids Web Game project, follow these steps:
 
 ## Support and Feedback
 
-If you encounter any issues or have any feedback to share, please feel free to [open an issue](link-to-issues) on GitHub. We welcome contributions from the community to improve and enhance the Kids Web Game project.
+If you encounter any issues or have any feedback to share, please feel free to issue on GitHub. We welcome contributions from the community to improve and enhance the Kids Web Game project.
 
 Thank you for your interest in our project!
 
