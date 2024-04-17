@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder game</title>
+    <title>Kids game</title>
     <!-- Additional meta tags, CSS links, or scripts can be included here -->
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeFrame(src) {
+            document.getElementById('content-frame').src = src;
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Placeholder game</h1>
+        <h1>Kids game</h1>
         <!-- Other header content can go here, like a logo or navigation -->
         <nav>
             <ul>
-                <li><a id="navplay"href="#">Play</a></li>
-                <li><a href="#">Game History</a></li>
+                <li><a id="navplay" href="#" onclick="changeFrame('./src/game/StartTheGame.php')">Play</a></li>
+                <li><a href="#" onclick="changeFrame('./src/features/score/history-table.php')">Game History</a></li>
                 <li class="userlog">
                 <?php
                     echo "<a href=\"";
@@ -37,7 +42,15 @@
     
     <main>
         <!-- Main content of the website goes here -->
-        <p>This is the main content of the website.</p>
+        <?php
+            if (!isset($_SESSION['username'])){
+                echo "<div style=\"text-align: center\"><p>Please sign into your account in order to play the game or view the game history.</p>";
+                echo "<button type=\"button\" class=\"btn\" onclick=\"window.location.href='./public/form/signin-form.php';\">Sign in</button></div>";
+            }
+            else {
+                echo "<iframe id='content-frame' src=\"./src/game/StartTheGame.php\" frameborder=\"0\" width=\"90%\" height=\"500\"></iframe>";
+            }
+        ?>
     </main>
     
     <footer>

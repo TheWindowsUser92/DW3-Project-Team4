@@ -16,22 +16,19 @@ session_start()
 	<form id="signinForm" method="post" action="../../src/features/signin.php">
 		<h2>Sign In</h2>
 		
-		<?php if (isset($_SESSION['signin-errorMessages'])): ?>
-    		<div style="color: red;">
-        	<?php 
-			try 
-        	{
-				echo htmlspecialchars($_SESSION['signin-errorMessages']);
-        		unset($_SESSION['signin-errorMessages']); // Clear the error message after displaying it
-			}
-			catch(e)
-			{
-				echo "<button type=\"button\" onclick=\"location.href='../../src/features/signout.php';\">Sign out</button>";
-			}
-        ?>
-    		</div>
-			<?php endif; 
-		?>
+		<?php
+
+            if (isset($_SESSION['signin-errorMessages'])) {
+                echo "<div style='color: red;'>";
+				foreach ($_SESSION['signin-errorMessages'] as $message) {
+					echo ($message) . '<br>';
+				}
+                echo "</div>";
+            	// Clear the error messages from session after displaying them
+                unset($_SESSION['signin-errorMessages']);
+            }
+            ?>
+    		</div> 
 
 		<label for="username">Username:</label>
 		<input type="text" id="username" name = "username"><br>
@@ -42,7 +39,7 @@ session_start()
 		<button type ="submit">Login</button>
         <button type="button" onclick="location.href='signup-form.php';">Register</button>
 
-		<p><a href="../../src/functions/changingPasswordOfExistingUser.php">Forgot your password? Change it</a></p>
+		<p>Forgot your password? <a href="../../src/functions/changingPasswordOfExistingUser.php">Change it</a></p>
 
 
 		

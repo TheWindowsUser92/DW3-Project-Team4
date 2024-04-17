@@ -54,7 +54,7 @@
         <div id="confirmPasswordMessage"></div>
 
         <button type="submit" name="action" value="register">Register</button>
-        <button type="button" onclick="location.href='signin-form.php';">login</button>
+        <button type="button" onclick="location.href='signin-form.php';">Login</button>
 
     </form>
 </body>

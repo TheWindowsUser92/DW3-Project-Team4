@@ -48,13 +48,33 @@ class Database {
     //Method for DB Connection 
     public function connectToDB($dbname)
 {
-    //Attempt to connect to MySQL using MySQLi
+    // Attempt to connect to MySQL using MySQLi
     if (!$this->connection) {
         $this->lastErrMsg = "MySQL connection is not established.";
         return FALSE;
     }
     
-    //Attempt to select the database
+    // Attempt to check if the database exists
+    $result = mysqli_query($this->connection, "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$dbname'");
+    
+    if (!$result) {
+        // Error checking if the database exists
+        $this->lastErrMsg = "Error checking database existence: " . mysqli_error($this->connection);
+        return FALSE;
+    }
+
+    if (mysqli_num_rows($result) == 0) {
+        // Database doesn't exist, create it using the SQL file
+        $createDBSQL = file_get_contents('.\database-entity.sql');
+        if ($this->executeMultiQuery($createDBSQL)) {
+            return TRUE; // Database created successfully
+        } else {
+            $this->lastErrMsg = "Error creating database '$dbname'";
+            return FALSE;
+        }
+    }
+
+    // Database exists, attempt to select it
     if (!mysqli_select_db($this->connection, $dbname)) {
         $this->lastErrMsg = "Error selecting database '$dbname': " . mysqli_error($this->connection);
         return FALSE;
@@ -62,6 +82,7 @@ class Database {
         return TRUE;
     }
 }
+
 
 
     //Method for multiple SQL Query Execution 

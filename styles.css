@@ -10,11 +10,60 @@ main {
   border-style: groove;
   border-color: #aa7;
   align-self: center;
+  text-align: center;
   margin:10px;
+}
+
+iframe {
+  border-style: groove;
+  border-width: 10px;
 }
 
 footer {
   background-color: #677;
+}
+
+/* Styles for the history table */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Header styles */
+.history-table th {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-align: left;
+}
+
+/* Row styles */
+.history-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray */
+}
+
+/* Hover effect */
+.history-table tr:hover {
+  background-color: #ddd; /* Gray */
+}
+
+
+.btn{
+  background-color: lime; /* Changed button background color */
+  color: auto;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  /*width: calc(100% - 20px); /* Adjusted width */
+  margin: 20px auto 10px; /* Adjusted margins */
 }
 
 nav {

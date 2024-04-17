@@ -1,1 +1,0 @@
-location: game-over.php

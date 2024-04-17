@@ -1,1 +1,0 @@
-location: history-table.php

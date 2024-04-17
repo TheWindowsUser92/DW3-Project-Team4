@@ -11,6 +11,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $errorMessages = [];
 
+    // Check if username or password is empty
+    if (empty($username)) {
+        $errorMessages[] = "Please enter a username.";
+    }
+    if (empty($password)) {
+        $errorMessages[] = "Please enter a password.";
+    }
+
+    // If there are error messages, store them in session and redirect back to signin form
+    if (!empty($errorMessages)) {
+        $_SESSION['signin-errorMessages'] = $errorMessages;
+        header('Location: ../../public/form/signin-form.php');
+        exit;
+    }
+
     // Instantiate Select class with the action key for fetching registration order
     $select = new Select('selectKey', $username);
 
@@ -24,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($result) && isset($result['row1']['registrationOrder'])) {
         $registrationOrder = $result['row1']['registrationOrder'];
     } else {
-        $_SESSION['signin-errorMessages'] = "An unexpected error occurred. Please try again.";
+        $_SESSION['signin-errorMessages'] = ["Sorry, the username or password is incorrect!"];
         header('Location: ../../public/form/signin-form.php');
         exit;
     }
@@ -40,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($resultPass) && isset($resultPass['row1']['passCode'])) {
         $hashedPassword = $resultPass['row1']['passCode'];
     } else {
-        $_SESSION['signin-errorMessages'] = "Password record not found.";
+        $_SESSION['signin-errorMessages'] = ["Password record not found."];
         header('Location: ../../public/form/signin-form.php');
         exit;
     }
@@ -49,15 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (password_verify($password, $hashedPassword)) {
         // If the password is correct, set the session variable and redirect to the game page
         $_SESSION['username'] = $username;
+        $_SESSION['registrationOrder'] = $registrationOrder;
         $_SESSION['signin-errorMessages'] = $errorMessages;
         header('Location: ../../index.php');
         exit;
     } else {
         // If the password is incorrect, set an error message
-        $_SESSION['error'] = "Sorry, the username or password is incorrect!";
-        $_SESSION['signin-errorMessages'] = $errorMessages;
+        $_SESSION['signin-errorMessages'] = ["Sorry, the username or password is incorrect!"];
         header('Location: ../../public/form/signin-form.php');
         exit;
-
     }
 }
