@@ -20,7 +20,7 @@ Developper 6: Mainly Kooshal Aman Foolmaun with help of all members
 ## Features
 
 - User Authentication: The application allows users to sign in and sign up, ensuring a secure and personalized experience.
-- Game Selection: Kids can choose from a variety of entertaining games designed specifically for them.
+- Game Selection: Kids can play through 6 levels of challenging games designed specifically for them.
 - Game State Management: The system keeps track of each user's progress and game states, providing a seamless gaming experience.
 
 ## Getting Started
